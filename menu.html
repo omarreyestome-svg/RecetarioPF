@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rápido & Rico | Menú comida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Aquí reutilizo la misma hoja de estilos general -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Aquí mantengo el mismo encabezado para todas las páginas -->
+    <header class="header">
+        <div class="header__logo">
+            <span class="logo__marca">Rápido & Rico</span>
+            <span class="logo__tagline">Comida rápida lista para antojos</span>
+        </div>
+
+        <nav class="nav">
+            <ul class="nav__lista">
+                <li><a href="index.html" class="nav__link">Menú principal</a></li>
+                <li><a href="menu.html" class="nav__link nav__link--activo">Menú comida</a></li>
+                <li><a href="galeria.html" class="nav__link">Galería</a></li>
+                <li><a href="promociones.html" class="nav__link">Promociones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Aquí organizo la página de menú de comida con subsecciones -->
+    <main class="main main--menu">
+        <h1 class="pagina__titulo">Menú de comida rápida</h1>
+        <p class="pagina__descripcion">
+            Aquí presento todos los productos con espacio para imagen, descripción,
+            medidas (chico, mediano, grande) y precios.
+        </p>
+
+        <!-- Aquí inicio la sección de platos principales -->
+        <section id="platos-principales" class="bloque-menu">
+            <h2 class="bloque-menu__titulo">Platos principales</h2>
+
+            <article class="item-menu">
+                <div class="item-menu__info">
+                    <h3>Hamburguesa Clásica</h3>
+                    <p class="item-menu__descripcion">
+                        Aquí describo el contenido de la hamburguesa y sus ingredientes principales.
+                    </p>
+                    <ul class="item-menu__medidas">
+                        <li>Chica: $00.00</li>
+                        <li>Mediana: $00.00</li>
+                        <li>Grande: $00.00</li>
+                    </ul>
+                </div>
+                <div class="item-menu__imagen">
+                    <!-- Aquí reservo espacio para la imagen de la hamburguesa -->
+                </div>
+            </article>
+
+            <article class="item-menu">
+                <div class="item-menu__info">
+                    <h3>Boneless BBQ</h3>
+                    <p class="item-menu__descripcion">
+                        Aquí anoto la descripción de los boneless, tipo de salsa y acompañamientos.
+                    </p>
+                    <ul class="item-menu__medidas">
+                        <li>Chico: $00.00</li>
+                        <li>Mediano: $00.00</li>
+                        <li>Grande: $00.00</li>
+                    </ul>
+                </div>
+                <div class="item-menu__imagen">
+                    <!-- Aquí reservo espacio para la imagen de los boneless -->
+                </div>
+            </article>
+        </section>
+
+        <!-- Aquí inicio la sección de bebidas -->
+        <section id="bebidas" class="bloque-menu">
+            <h2 class="bloque-menu__titulo">Bebidas</h2>
+
+            <article class="item-menu">
+                <div class="item-menu__info">
+                    <h3>Refresco</h3>
+                    <p class="item-menu__descripcion">
+                        Aquí indico los sabores disponibles y opciones de vaso o botella.
+                    </p>
+                    <ul class="item-menu__medidas">
+                        <li>Chico: $00.00</li>
+                        <li>Mediano: $00.00</li>
+                        <li>Grande: $00.00</li>
+                    </ul>
+                </div>
+                <div class="item-menu__imagen">
+                    <!-- Aquí reservo espacio para la imagen del refresco -->
+                </div>
+            </article>
+        </section>
+
+        <!-- Aquí inicio la sección de postres -->
+        <section id="postres" class="bloque-menu">
+            <h2 class="bloque-menu__titulo">Postres</h2>
+
+            <article class="item-menu">
+                <div class="item-menu__info">
+                    <h3>Helado en vaso</h3>
+                    <p class="item-menu__descripcion">
+                        Aquí describo los sabores de helado y los toppings disponibles.
+                    </p>
+                    <ul class="item-menu__medidas">
+                        <li>Chico: $00.00</li>
+                        <li>Mediano: $00.00</li>
+                        <li>Grande: $00.00</li>
+                    </ul>
+                </div>
+                <div class="item-menu__imagen">
+                    <!-- Aquí reservo espacio para la imagen del helado -->
+                </div>
+            </article>
+        </section>
+
+        <!-- Aquí dejo una sección para paquetes y combos dentro del menú de comida -->
+        <section id="paquetes" class="bloque-menu">
+            <h2 class="bloque-menu__titulo">Paquetes y combos</h2>
+
+            <article class="item-menu">
+                <div class="item-menu__info">
+                    <h3>Combo Hamburguesa + Papas + Refresco</h3>
+                    <p class="item-menu__descripcion">
+                        Aquí detallo el contenido del combo y su precio.
+                    </p>
+                    <ul class="item-menu__medidas">
+                        <li>Único: $00.00</li>
+                    </ul>
+                </div>
+                <div class="item-menu__imagen">
+                    <!-- Aquí reservo espacio para la imagen del combo -->
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Aquí reutilizo el mismo pie de página -->
+    <footer class="footer">
+        <p>Nombre del alumno: <span>Escribe aquí tu nombre</span></p>
+        <p>Materia: <span>Escribe aquí la materia</span></p>
+        <p>Menú digital de comida rápida para uso académico.</p>
+    </footer>
+</body>
+</html>
