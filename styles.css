@@ -331,12 +331,21 @@ body {
     margin-bottom: 0.2rem;
 }
 
-/* Aquí reservo el espacio donde después colocaré las imágenes de cada producto */
+/* Aquí defino el contenedor donde va la imagen del platillo */
 .item-menu__imagen {
     background-color: #191919;
     border-radius: 8px;
     border: 1px dashed #444;
     min-height: 110px;
+    overflow: hidden; /* Aquí cuido que la imagen no se salga del borde */
+}
+
+/* Aquí ajusto la imagen del platillo para que llene el contenedor */
+.item-menu__imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* Aquí defino la cuadrícula de la galería */
@@ -356,6 +365,14 @@ body {
     justify-content: center;
     font-size: 0.85rem;
     color: var(--color-texto-suave);
+}
+
+/* Aquí ajusto las imágenes de la galería */
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* Aquí doy estilo a las tarjetas de promociones */
