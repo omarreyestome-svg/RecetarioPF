@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rápido & Rico | Menú digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Aquí enlazo mi hoja de estilos principal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Aquí defino el encabezado con logo y navegación principal -->
+    <header class="header">
+        <div class="header__logo">
+            <span class="logo__marca">Rápido & Rico</span>
+            <span class="logo__tagline">Comida rápida lista para antojos</span>
+        </div>
+
+        <nav class="nav">
+            <ul class="nav__lista">
+                <li><a href="index.html" class="nav__link nav__link--activo">Menú principal</a></li>
+                <li><a href="menu.html" class="nav__link">Menú comida</a></li>
+                <li><a href="galeria.html" class="nav__link">Galería</a></li>
+                <li><a href="promociones.html" class="nav__link">Promociones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Aquí estructuro el contenido principal de la página de inicio -->
+    <main class="main">
+        <!-- Aquí coloco la sección de bienvenida tipo hero -->
+        <section class="hero">
+            <div class="hero__texto">
+                <h1 class="hero__titulo">Bienvenido a Rápido & Rico</h1>
+                <p class="hero__descripcion">
+                    Aquí presento el menú digital de este restaurante de comida rápida:
+                    hamburguesas, papas, alitas, hot dogs y combos completos listos para llevar
+                    o para comer en el lugar.
+                </p>
+                <a href="menu.html" class="btn">Ver menú completo</a>
+            </div>
+
+            <div class="hero__detalles">
+                <p><span class="chip chip--primario">Comida rápida</span></p>
+                <p><span class="chip">Servicio para llevar</span> <span class="chip">Consumo en el lugar</span></p>
+                <p class="hero__horario">
+                    Horario de servicio (ejemplo):<br>
+                    <strong>Lunes a domingo de 12:00 p.m. a 10:00 p.m.</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Aquí defino una sección con información básica del restaurante -->
+        <section class="info-basica">
+            <h2 class="info-basica__titulo">Información básica del restaurante</h2>
+            <div class="info-basica__grid">
+                <article class="info-card">
+                    <h3>Tipo de comida</h3>
+                    <p>
+                        Aquí dejo claro que el enfoque es comida rápida: hamburguesas,
+                        boneless, alitas, papas a la francesa, hot dogs y snacks.
+                    </p>
+                </article>
+                <article class="info-card">
+                    <h3>Ambiente</h3>
+                    <p>
+                        Aquí describo un ambiente informal y cómodo, pensado para estudiantes,
+                        familias y grupos de amigos que buscan algo rápido y accesible.
+                    </p>
+                </article>
+                <article class="info-card">
+                    <h3>Servicio</h3>
+                    <p>
+                        Aquí aclaro que el menú está pensado tanto para consumo en mesa como
+                        para pedidos rápidos para llevar.
+                    </p>
+                </article>
+            </div>
+        </section>
