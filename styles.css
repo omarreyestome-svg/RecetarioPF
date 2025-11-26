@@ -1,16 +1,16 @@
-/* Aquí defino un reseteo básico para mantener consistencia */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Aquí establezco variables simples para la paleta de comida rápida */
+/* Paleta y variables */
 :root {
     --color-fondo: #121212;
     --color-panel: #1f1f1f;
-    --color-primario: #ff4b3a;   /* rojo tipo comida rápida */
-    --color-secundario: #ffc700; /* amarillo tipo comida rápida */
+    --color-primario: #ff4b3a;
+    --color-secundario: #ffc700;
     --color-texto: #f7f7f7;
     --color-texto-suave: #c9c9c9;
 
@@ -18,7 +18,7 @@
     --radio: 10px;
 }
 
-/* Aquí defino la tipografía general y el fondo de la página */
+/* Fondo general */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background-color: var(--color-fondo);
@@ -26,23 +26,22 @@ body {
     line-height: 1.6;
 }
 
-/* Aquí centro el contenido principal en la pantalla */
+/* Contenedor principal */
 .main {
     max-width: var(--max-ancho);
     margin: 0 auto;
     padding: 1.5rem 1rem 3rem;
 }
 
-/* Aquí hago que la barra superior sea más alta y visible */
+/* ---------- ENCABEZADO (como en la versión inicial) ---------- */
 .header {
     background-color: #181818;
     border-bottom: 2px solid var(--color-primario);
-    padding: 1.2rem 2rem;     /* más espacio vertical y horizontal */
-    min-height: 72px;         /* altura mínima para que no se haga tan delgada */
+    padding: 0.8rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .header__logo {
@@ -50,20 +49,17 @@ body {
     flex-direction: column;
 }
 
-/* Aquí ajusto el tamaño del nombre del restaurante */
 .logo__marca {
     font-weight: 700;
-    font-size: 1.35rem;       /* un poco más grande que antes */
+    font-size: 1.25rem;
     color: var(--color-secundario);
 }
 
-/* Aquí ajusto el tamaño del subtítulo del restaurante */
 .logo__tagline {
-    font-size: 0.9rem;        /* antes 0.8rem */
+    font-size: 0.8rem;
     color: var(--color-texto-suave);
 }
 
-/* Aquí organizo el menú de navegación */
 .nav__lista {
     list-style: none;
     display: flex;
@@ -71,12 +67,11 @@ body {
     gap: 0.8rem;
 }
 
-/* Aquí aumento ligeramente el tamaño y altura de los enlaces del menú */
 .nav__link {
     text-decoration: none;
     color: var(--color-texto-suave);
-    font-size: 0.95rem;       /* un poco más grande */
-    padding: 0.4rem 0.9rem;   /* más alto y más ancho */
+    font-size: 0.9rem;
+    padding: 0.3rem 0.7rem;
     border-radius: 999px;
     border: 1px solid transparent;
     transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
@@ -92,7 +87,7 @@ body {
     color: #fff;
 }
 
-/* Aquí doy estilo a la sección hero de la página principal */
+/* ---------- HERO INDEX ---------- */
 .hero {
     margin-top: 1.5rem;
     padding: 2rem 1.5rem;
@@ -113,7 +108,7 @@ body {
     margin-bottom: 1.2rem;
 }
 
-/* Aquí defino un botón simple reutilizable */
+/* Botón principal */
 .btn {
     display: inline-block;
     padding: 0.6rem 1.3rem;
@@ -131,7 +126,7 @@ body {
     background-color: #ffd74d;
 }
 
-/* Aquí doy formato a los chips de información */
+/* Chips */
 .chip {
     display: inline-block;
     padding: 0.25rem 0.7rem;
@@ -164,7 +159,7 @@ body {
     margin-top: 0.5rem;
 }
 
-/* Aquí defino la sección de información básica del restaurante */
+/* ---------- INFO BÁSICA INDEX ---------- */
 .info-basica {
     margin-top: 2.2rem;
 }
@@ -196,7 +191,7 @@ body {
     color: var(--color-texto-suave);
 }
 
-/* Aquí defino la sección de resumen del menú */
+/* ---------- RESUMEN MENÚ ---------- */
 .resumen {
     margin-top: 2.2rem;
 }
@@ -229,7 +224,6 @@ body {
     margin-bottom: 0.7rem;
 }
 
-/* Aquí defino el enlace simple para usar dentro de tarjetas */
 .link-simple {
     text-decoration: none;
     font-size: 0.85rem;
@@ -240,7 +234,7 @@ body {
     text-decoration: underline;
 }
 
-/* Aquí doy forma a la sección de platos destacados */
+/* ---------- DESTACADOS ---------- */
 .destacados {
     margin-top: 2.5rem;
 }
@@ -255,7 +249,6 @@ body {
     gap: 1rem;
 }
 
-/* Tarjetas de platos destacados */
 .plato-card {
     background-color: var(--color-panel);
     border-radius: var(--radio);
@@ -276,7 +269,7 @@ body {
     margin-top: 0.5rem;
 }
 
-/* Títulos de páginas internas */
+/* ---------- TÍTULOS PÁGINAS INTERNAS ---------- */
 .pagina__titulo {
     font-size: 1.6rem;
     margin: 1.5rem 0 0.4rem;
@@ -288,7 +281,7 @@ body {
     margin-bottom: 1.2rem;
 }
 
-/* Bloques del menú de comida */
+/* ---------- MENÚ COMIDA ---------- */
 .main--menu {
     padding-top: 1rem;
 }
@@ -307,7 +300,6 @@ body {
     color: var(--color-secundario);
 }
 
-/* Cada producto del menú como tarjeta flexible */
 .item-menu {
     display: grid;
     grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
@@ -335,12 +327,12 @@ body {
     margin-bottom: 0.2rem;
 }
 
-/* Aquí ajusto las fotos del menú para que sean más pequeñas y parejas */
+/* FOTOS DEL MENÚ (único cambio: tamaño controlado) */
 .item-menu__imagen {
     background-color: #191919;
     border-radius: 8px;
     border: 1px dashed #444;
-    height: 160px;          /* altura fija más pequeña */
+    height: 160px;          /* altura fija para que no se hagan enormes */
     overflow: hidden;
 }
 
@@ -351,19 +343,18 @@ body {
     display: block;
 }
 
-/* Galería */
+/* ---------- GALERÍA ---------- */
 .galeria-grid {
     margin-top: 1rem;
     display: grid;
     gap: 1rem;
 }
 
-/* Aquí ajusto las fotos de la galería para que tengan tamaño uniforme */
 .galeria-item {
     background-color: var(--color-panel);
     border-radius: var(--radio);
     border: 1px dashed #444;
-    height: 160px;          /* misma altura para todas las fotos */
+    height: 160px;          /* misma lógica que el menú */
     overflow: hidden;
 }
 
@@ -374,7 +365,7 @@ body {
     display: block;
 }
 
-/* Promociones */
+/* ---------- PROMOCIONES ---------- */
 .promos {
     margin-top: 1.2rem;
     display: grid;
@@ -399,14 +390,13 @@ body {
     color: var(--color-texto-suave);
 }
 
-/* Aquí hago que el pie de página sea más alto y legible */
+/* ---------- FOOTER (como al inicio) ---------- */
 .footer {
     margin-top: 2rem;
-    padding: 1.2rem 2rem;   /* más espacio que antes */
-    min-height: 70px;       /* altura mínima fija */
+    padding: 1rem 1.2rem;
     background-color: #181818;
     border-top: 2px solid var(--color-primario);
-    font-size: 0.9rem;      /* texto un poco más grande */
+    font-size: 0.8rem;
     color: var(--color-texto-suave);
 }
 
@@ -418,7 +408,7 @@ body {
     color: var(--color-texto);
 }
 
-/* Ajustes para pantallas más grandes */
+/* ---------- RESPONSIVE ---------- */
 @media (min-width: 720px) {
     .hero {
         grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
@@ -445,7 +435,6 @@ body {
     }
 }
 
-/* Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {
     .header {
         flex-direction: column;
