@@ -306,30 +306,30 @@ body {
 /* Aquí organizo cada producto del menú como una tarjeta flexible */
 .item-menu {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
     gap: 1rem;
     padding: 0.8rem 0;
     border-top: 1px solid #333;
+    align-items: stretch;
 }
 
-.item-menu:first-of-type {
-    border-top: none;
+/* Aquí defino el contenedor donde va la imagen del platillo */
+.item-menu__imagen {
+    background-color: #191919;
+    border-radius: 8px;
+    border: 1px dashed #444;
+    height: 220px;          /* todas las fotos del menú a la misma altura */
+    overflow: hidden;       /* la imagen no se sale del recuadro */
 }
 
-.item-menu__descripcion {
-    font-size: 0.9rem;
-    color: var(--color-texto-suave);
-    margin: 0.4rem 0 0.6rem;
+/* Aquí ajusto la imagen del platillo para que llene el contenedor */
+.item-menu__imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.item-menu__medidas {
-    list-style: none;
-    font-size: 0.9rem;
-}
-
-.item-menu__medidas li {
-    margin-bottom: 0.2rem;
-}
 
 /* Aquí defino el contenedor donde va la imagen del platillo */
 .item-menu__imagen {
@@ -348,23 +348,19 @@ body {
     display: block;
 }
 
-/* Aquí defino la cuadrícula de la galería */
 .galeria-grid {
     margin-top: 1rem;
     display: grid;
     gap: 1rem;
 }
 
+/* Aquí defino cada tarjeta de la galería con altura fija */
 .galeria-item {
     background-color: var(--color-panel);
     border-radius: var(--radio);
     border: 1px dashed #444;
-    min-height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    color: var(--color-texto-suave);
+    height: 220px;              /* todas las fotos de galería misma altura */
+    overflow: hidden;           /* recorto lo que sobre */
 }
 
 /* Aquí ajusto las imágenes de la galería */
@@ -374,6 +370,7 @@ body {
     object-fit: cover;
     display: block;
 }
+
 
 /* Aquí doy estilo a las tarjetas de promociones */
 .promos {
@@ -456,3 +453,4 @@ body {
         grid-template-columns: minmax(0, 1fr);
     }
 }
+
