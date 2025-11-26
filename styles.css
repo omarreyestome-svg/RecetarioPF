@@ -14,7 +14,8 @@
     --color-texto: #f7f7f7;
     --color-texto-suave: #c9c9c9;
 
-    --max-ancho: 1100px;
+    /* Aquí incremento el ancho máximo del contenido principal */
+    --max-ancho: 1400px;
     --radio: 10px;
 }
 
@@ -24,13 +25,15 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
     line-height: 1.6;
+    font-size: 18px; /* Aquí aumento el tamaño base del texto */
 }
 
-/* Aquí centro el contenido principal en la pantalla */
+/* Aquí hago que el contenido aproveche más la pantalla */
 .main {
     max-width: var(--max-ancho);
+    width: 95vw;
     margin: 0 auto;
-    padding: 1.5rem 1rem 3rem;
+    padding: 2rem 2rem 4rem;
 }
 
 /* Aquí doy estilo al encabezado con la navegación */
@@ -98,8 +101,9 @@ body {
     gap: 1.5rem;
 }
 
+/* Aquí aumento el tamaño del título principal */
 .hero__titulo {
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin-bottom: 0.6rem;
 }
 
@@ -166,7 +170,7 @@ body {
 }
 
 .info-basica__titulo {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 
@@ -198,7 +202,7 @@ body {
 }
 
 .resumen__titulo {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 
@@ -242,7 +246,7 @@ body {
 }
 
 .destacados__titulo {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 
@@ -251,7 +255,7 @@ body {
     gap: 1rem;
 }
 
-/* Aquí defino las tarjetas de platos con espacio para imágenes futuras */
+/* Aquí defino las tarjetas de platos destacados */
 .plato-card {
     background-color: var(--color-panel);
     border-radius: var(--radio);
@@ -272,9 +276,9 @@ body {
     margin-top: 0.5rem;
 }
 
-/* Aquí defino los títulos de página secundarios */
+/* Aquí aumento el tamaño de los títulos de páginas internas */
 .pagina__titulo {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 1.5rem 0 0.4rem;
 }
 
@@ -298,7 +302,7 @@ body {
 }
 
 .bloque-menu__titulo {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     color: var(--color-secundario);
 }
@@ -313,16 +317,35 @@ body {
     align-items: stretch;
 }
 
+.item-menu:first-of-type {
+    border-top: none;
+}
+
+.item-menu__descripcion {
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+    margin: 0.4rem 0 0.6rem;
+}
+
+.item-menu__medidas {
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+.item-menu__medidas li {
+    margin-bottom: 0.2rem;
+}
+
 /* Aquí defino el contenedor donde va la imagen del platillo */
 .item-menu__imagen {
     background-color: #191919;
     border-radius: 8px;
     border: 1px dashed #444;
     height: 220px;          /* todas las fotos del menú a la misma altura */
-    overflow: hidden;       /* la imagen no se sale del recuadro */
+    overflow: hidden;       /* aquí cuido que la imagen no se salga del borde */
 }
 
-/* Aquí ajusto la imagen del platillo para que llene el contenedor */
+/* Aquí ajusto la imagen del platillo para que llene el contenedor sin deformarse */
 .item-menu__imagen img {
     width: 100%;
     height: 100%;
@@ -330,24 +353,7 @@ body {
     display: block;
 }
 
-
-/* Aquí defino el contenedor donde va la imagen del platillo */
-.item-menu__imagen {
-    background-color: #191919;
-    border-radius: 8px;
-    border: 1px dashed #444;
-    min-height: 110px;
-    overflow: hidden; /* Aquí cuido que la imagen no se salga del borde */
-}
-
-/* Aquí ajusto la imagen del platillo para que llene el contenedor */
-.item-menu__imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
+/* Aquí defino la cuadrícula de la galería */
 .galeria-grid {
     margin-top: 1rem;
     display: grid;
@@ -359,8 +365,8 @@ body {
     background-color: var(--color-panel);
     border-radius: var(--radio);
     border: 1px dashed #444;
-    height: 220px;              /* todas las fotos de galería misma altura */
-    overflow: hidden;           /* recorto lo que sobre */
+    height: 220px;          /* todas las fotos de galería misma altura */
+    overflow: hidden;
 }
 
 /* Aquí ajusto las imágenes de la galería */
@@ -370,7 +376,6 @@ body {
     object-fit: cover;
     display: block;
 }
-
 
 /* Aquí doy estilo a las tarjetas de promociones */
 .promos {
@@ -400,10 +405,10 @@ body {
 /* Aquí defino el pie de página general */
 .footer {
     margin-top: 2rem;
-    padding: 1rem 1.2rem;
+    padding: 1rem 2rem;
     background-color: #181818;
     border-top: 2px solid var(--color-primario);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--color-texto-suave);
 }
 
@@ -449,8 +454,20 @@ body {
         align-items: flex-start;
     }
 
+    .main {
+        width: 100vw;
+        padding: 1.5rem 1rem 3rem;
+    }
+
     .item-menu {
         grid-template-columns: minmax(0, 1fr);
     }
-}
 
+    .item-menu__imagen {
+        height: 200px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
